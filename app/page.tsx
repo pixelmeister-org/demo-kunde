@@ -19,7 +19,7 @@ export default function Home() {
       </header>
 
       <section style={section}>
-        <h2 data-edit-id="about-title">Unser Salon</h2>
+        <h2 data-edit-id="about-title">Über uns</h2>
         <p data-edit-id="about-text" style={{ lineHeight: 1.7, color: "#333" }}>
           Seit 2015 verwöhnen wir unsere Kundinnen und Kunden mit Handwerk, Ruhe und einer
           guten Tasse Kaffee. Klein, persönlich, ehrlich — so mögen wir es.
