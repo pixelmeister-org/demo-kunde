@@ -18,12 +18,35 @@ export default function Home() {
         </button>
       </header>
 
-      <section style={section}>
-        <h2 data-edit-id="about-title">Über uns</h2>
-        <p data-edit-id="about-text" style={{ lineHeight: 1.7, color: "#333" }}>
-          Seit 2015 verwöhnen wir unsere Kundinnen und Kunden mit Handwerk, Ruhe und einer
-          guten Tasse Kaffee. Klein, persönlich, ehrlich — so mögen wir es.
+      <section style={{ ...section, background: "#fff9f4", borderRadius: 16, padding: "48px 32px", boxShadow: "0 2px 16px rgba(0,0,0,0.05)" }}>
+        <h2 data-edit-id="about-title" style={{ fontSize: 32, marginBottom: 8, color: "#1a1a1a" }}>Über uns ✂️</h2>
+        <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", color: "#16a34a", marginBottom: 24 }}>
+          Ihr Wohlfühl-Salon im 22. Bezirk · Wien-Donaustadt
         </p>
+        <p data-edit-id="about-text" style={{ lineHeight: 1.85, color: "#333", fontSize: 16, marginBottom: 20 }}>
+          Seit 2015 sind wir im Herzen der Donaustadt zuhause — und genau das spürt man bei uns.
+          Kein Stress, keine Anonymität, dafür echte Handwerkskunst, ein herzliches Team und
+          natürlich eine gute Tasse Wiener Kaffee, während wir uns um euch kümmern.
+        </p>
+        <p style={{ lineHeight: 1.85, color: "#333", fontSize: 16, marginBottom: 28 }}>
+          Ob klassischer Herrenschnitt, moderner Damencut oder aufwendige Colorationen —
+          wir nehmen uns die Zeit, die ihr verdient. Klein, persönlich, ehrlich.
+          So wie man sich einen Salon in Wien wünscht.
+        </p>
+        <div style={{ display: "flex", gap: 24, flexWrap: "wrap" as const, marginTop: 8 }}>
+          {[
+            { icon: "📍", label: "22. Bezirk", sub: "Wien-Donaustadt" },
+            { icon: "🏆", label: "Seit 2015", sub: "Erfahrung & Leidenschaft" },
+            { icon: "💚", label: "Persönlich", sub: "Jeder Gast ist einzigartig" },
+            { icon: "☕", label: "Wohlfühlen", sub: "Kaffee inklusive" },
+          ].map(({ icon, label, sub }) => (
+            <div key={label} style={{ background: "#fff", borderRadius: 12, padding: "16px 20px", flex: "1 1 140px", boxShadow: "0 1px 6px rgba(0,0,0,0.07)", textAlign: "center" as const }}>
+              <div style={{ fontSize: 28, marginBottom: 6 }}>{icon}</div>
+              <div style={{ fontWeight: 700, color: "#1a1a1a", fontSize: 15 }}>{label}</div>
+              <div style={{ fontSize: 12, color: "#777", marginTop: 2 }}>{sub}</div>
+            </div>
+          ))}
+        </div>
       </section>
 
       <section style={{ ...section, background: "#faf7f2" }}>
