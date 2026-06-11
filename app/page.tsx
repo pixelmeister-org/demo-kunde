@@ -12,7 +12,7 @@ export default function Home() {
         </p>
         <button
           data-edit-id="hero-cta"
-          style={{ background: "#1a1a1a", color: "#fff", padding: "14px 32px", border: 0, fontSize: 16, marginTop: 24, cursor: "pointer" }}
+          style={{ background: "#16a34a", color: "#fff", padding: "14px 32px", border: 0, fontSize: 16, marginTop: 24, cursor: "pointer" }}
         >
           Termin buchen
         </button>
