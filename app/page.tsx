@@ -36,7 +36,7 @@ export default function Home() {
       <section style={section}>
         <h2 data-edit-id="prices-title">Leistungen &amp; Preise</h2>
         <ul style={{ lineHeight: 2, listStyle: "none", padding: 0 }}>
-          <li data-edit-id="price-1">Schnitt &amp; Föhnen — ab 45 €</li>
+          <li data-edit-id="price-1">Schnitt &amp; Föhnen — ab 49 €</li>
           <li data-edit-id="price-2">Farbe &amp; Strähnen — ab 80 €</li>
           <li data-edit-id="price-3">Bart &amp; Pflege — ab 25 €</li>
         </ul>
