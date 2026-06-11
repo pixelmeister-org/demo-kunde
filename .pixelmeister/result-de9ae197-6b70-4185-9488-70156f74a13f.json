@@ -1,0 +1,7 @@
+{
+  "requestId": "de9ae197-6b70-4185-9488-70156f74a13f",
+  "ok": true,
+  "summary": "Die Öffnungszeiten in `app/page.tsx` (data-edit-id=\"hours\") waren bereits auf „Mo–Fr 10–19 Uhr\" gesetzt – der gewünschte Zieltext stimmte exakt mit dem vorhandenen Inhalt überein. Keine Änderung notwendig, TypeScript-Prüfung erfolgreich.",
+  "totalInputTokens": 9733,
+  "totalOutputTokens": 465
+}
