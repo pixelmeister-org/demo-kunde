@@ -1,0 +1,7 @@
+{
+  "requestId": "39e524e1-d259-4d10-a3f5-eb7cb243b770",
+  "ok": true,
+  "summary": "Die Öffnungszeiten in `app/page.tsx` wurden von „Mo–Fr 9–18 Uhr, Sa 9–13 Uhr\" auf „Mo–Fr 10–19 Uhr\" geändert. Der Samstag-Eintrag wurde dabei entfernt, da er nicht in den neuen Öffnungszeiten enthalten ist.",
+  "totalInputTokens": 8872,
+  "totalOutputTokens": 462
+}
