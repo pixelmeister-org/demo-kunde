@@ -18,6 +18,7 @@ export function middleware(request: NextRequest) {
       secure: true,
       sameSite: "none", // iframe ist cross-site eingebettet
       path: "/",
+      partitioned: true, // CHIPS: verhindert Blockierung durch Browser (3rd-party-Cookie-Sperre)
     });
     return response;
   }
