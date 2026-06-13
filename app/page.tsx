@@ -152,7 +152,7 @@ export default function Home() {
               }}
             >
               <span style={{ fontSize: 16, fontWeight: 600 }}>Schnitt &amp; Föhnen</span>
-              <span style={{ fontSize: 16, fontWeight: 700, color: "#b89c6e" }}>ab 49 €</span>
+              <span style={{ fontSize: 16, fontWeight: 700, color: "#b89c6e" }}>ab 57 €</span>
             </li>
             <li
               data-edit-id="price-2"
