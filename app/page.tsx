@@ -124,7 +124,7 @@ export default function Home() {
           <div
             style={{
               borderTop: "1px solid #ece8e1",
-              padding: "16px 0 20px",
+              padding: "16px 24px 20px",
               display: "flex",
               flexDirection: "column",
               gap: 14,
@@ -141,17 +141,38 @@ export default function Home() {
                   letterSpacing: "0.1em",
                   textTransform: "uppercase",
                   color: "#444",
+                  padding: "4px 0",
                 }}
               >
                 {label}
               </a>
             ))}
+            <a
+              href="#kontakt"
+              onClick={() => setMenuOpen(false)}
+              style={{
+                textDecoration: "none",
+                fontSize: 11,
+                fontWeight: 600,
+                letterSpacing: "0.12em",
+                textTransform: "uppercase",
+                background: DARK,
+                color: "#fff",
+                padding: "11px 20px",
+                borderRadius: 3,
+                textAlign: "center",
+                marginTop: 6,
+              }}
+            >
+              Termin buchen
+            </a>
           </div>
         )}
       </nav>
 
       {/* HERO */}
       <header
+        className="hero-section"
         style={{
           background: DARK,
           color: "#fff",
@@ -253,6 +274,7 @@ export default function Home() {
             Öffnungszeiten
           </h2>
           <div
+            className="hours-card"
             style={{
               display: "inline-flex",
               alignItems: "center",
@@ -299,6 +321,7 @@ export default function Home() {
               <li
                 key={id}
                 data-edit-id={id}
+                className="price-item"
                 style={{
                   display: "flex",
                   justifyContent: "space-between",
@@ -340,6 +363,7 @@ export default function Home() {
         </span>
         <p
           data-edit-id="contact"
+          className="footer-contact"
           style={{ margin: 0, fontSize: 14, lineHeight: 2, color: "#666" }}
         >
           Demogasse 1, 1220 Wien &nbsp;·&nbsp; 01 234 56 78 &nbsp;·&nbsp; hallo@salon-demo.at
@@ -349,16 +373,43 @@ export default function Home() {
         </p>
       </footer>
 
-      {/* Responsive Nav */}
+      {/* Responsive Styles */}
       <style>{`
+        /* --- Navigation --- */
         @media (max-width: 640px) {
-          .nav-desktop { display: none !important; }
-          .nav-cta-desktop { display: none !important; }
-          .nav-hamburger { display: flex !important; }
+          .nav-desktop      { display: none !important; }
+          .nav-cta-desktop  { display: none !important; }
+          .nav-hamburger    { display: flex !important; }
         }
         @media (min-width: 641px) {
-          .nav-hamburger { display: none !important; }
+          .nav-hamburger    { display: none !important; }
         }
+
+        /* --- Sections --- */
+        @media (max-width: 480px) {
+          /* Hero */
+          .hero-section {
+            padding: 72px 20px 60px !important;
+          }
+          /* Öffnungszeiten-Karte umbrechend */
+          .hours-card {
+            display: flex !important;
+            flex-wrap: wrap;
+            width: 100%;
+            box-sizing: border-box;
+          }
+          /* Footer-Kontakttext */
+          .footer-contact {
+            word-break: break-word;
+          }
+          /* Preisliste kompakter */
+          .price-item {
+            padding: 16px 16px !important;
+          }
+        }
+
+        /* --- Link Hover --- */
+        a { transition: color 0.2s; }
       `}</style>
     </main>
   );
