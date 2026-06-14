@@ -44,7 +44,7 @@ export default function Home() {
               lineHeight: 1.1,
             }}
           >
-            Praxis für Kraniosakral-Therapie
+            Praxis für Craniosakral-Therapie
           </h1>
           <p
             data-edit-id="hero-subtitle"
