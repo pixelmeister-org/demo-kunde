@@ -4,7 +4,7 @@ const accentBar: React.CSSProperties = {
   display: "block",
   width: 40,
   height: 3,
-  background: "#b89c6e",
+  background: "#7aa89c",
   marginBottom: 20,
 };
 
@@ -15,7 +15,7 @@ export default function Home() {
       {/* ── HERO ── */}
       <header
         style={{
-          background: "linear-gradient(160deg, #1a1a1a 0%, #2e2e2e 100%)",
+          background: "linear-gradient(160deg, #1d3530 0%, #2e5248 100%)",
           color: "#fff",
           padding: "96px 24px 80px",
           textAlign: "center",
@@ -27,41 +27,41 @@ export default function Home() {
               letterSpacing: "0.18em",
               fontSize: 11,
               textTransform: "uppercase",
-              color: "#b89c6e",
+              color: "#a8d5c8",
               marginBottom: 18,
               marginTop: 0,
             }}
           >
-            Friseursalon · Wien
+            Kraniosakral-Therapie · Wien
           </p>
           <h1
             data-edit-id="hero-title"
             style={{
-              fontSize: "clamp(38px, 7vw, 58px)",
+              fontSize: "clamp(36px, 7vw, 56px)",
               fontWeight: 700,
               letterSpacing: "-0.5px",
               margin: "0 0 20px",
               lineHeight: 1.1,
             }}
           >
-            Salon Demo
+            Praxis für Kraniosakral-Therapie
           </h1>
           <p
             data-edit-id="hero-subtitle"
             style={{
               fontSize: 19,
-              color: "#c9c9c9",
+              color: "#c2ddd8",
               marginTop: 0,
               marginBottom: 36,
               lineHeight: 1.6,
             }}
           >
-            Ihr Friseur im Herzen von Wien — Termine ohne Wartezeit.
+            Sanfte Berührung — tiefe Wirkung. Ihre Praxis für ganzheitliche Gesundheit im Herzen von Wien.
           </p>
           <button
             data-edit-id="hero-cta"
             style={{
-              background: "#b89c6e",
+              background: "#7aa89c",
               color: "#fff",
               padding: "15px 38px",
               border: 0,
@@ -73,12 +73,12 @@ export default function Home() {
               textTransform: "uppercase",
             }}
           >
-            Termin buchen
+            Termin vereinbaren
           </button>
         </div>
       </header>
 
-      {/* ── ÜBER UNS ── */}
+      {/* ── WAS IST KRANIOSAKRAL-THERAPIE ── */}
       <section style={{ padding: "72px 24px" }}>
         <div style={maxW}>
           <span style={accentBar} />
@@ -86,50 +86,103 @@ export default function Home() {
             data-edit-id="about-title"
             style={{ fontSize: 30, margin: "0 0 16px", fontWeight: 700 }}
           >
-            Über uns
+            Was ist Kraniosakral-Therapie?
           </h2>
           <p
             data-edit-id="about-text"
             style={{ lineHeight: 1.8, color: "#444", fontSize: 17, margin: 0 }}
           >
-            Seit 2015 verwöhnen wir unsere Kundinnen und Kunden mit Handwerk, Ruhe und einer
-            guten Tasse Kaffee. Klein, persönlich, ehrlich — so mögen wir es.
+            Die Kraniosakral-Therapie ist eine sanfte, manuelle Körpertherapie, die das
+            kraniosakrale System — bestehend aus Schädel, Wirbelsäule und Kreuzbein —
+            in seiner natürlichen Bewegung unterstützt. Mit feinfühligen Handgriffen werden
+            Blockaden im Fluss der Gehirn-Rückenmarksflüssigkeit gelöst, das Nervensystem
+            beruhigt und die Selbstheilungskräfte des Körpers aktiviert. Die Methode wirkt
+            tief und nachhaltig, ohne dabei invasiv zu sein.
           </p>
         </div>
       </section>
 
-      {/* ── ÖFFNUNGSZEITEN ── */}
-      <section style={{ background: "#faf7f2", padding: "64px 24px" }}>
+      {/* ── ANWENDUNGSGEBIETE ── */}
+      <section style={{ background: "#f2f8f6", padding: "72px 24px" }}>
         <div style={maxW}>
           <span style={accentBar} />
           <h2
-            data-edit-id="hours-title"
-            style={{ fontSize: 30, margin: "0 0 24px", fontWeight: 700 }}
+            data-edit-id="areas-title"
+            style={{ fontSize: 30, margin: "0 0 32px", fontWeight: 700 }}
           >
-            Öffnungszeiten
+            Anwendungsgebiete
           </h2>
-          <div
+          <ul
             style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 14,
-              background: "#fff",
-              border: "1px solid #e8e0d4",
-              borderRadius: 8,
-              padding: "18px 28px",
-              boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
+              listStyle: "none",
+              padding: 0,
+              margin: 0,
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))",
+              gap: 16,
             }}
           >
-            <span style={{ fontSize: 24 }}>🕘</span>
-            <p data-edit-id="hours" style={{ fontSize: 17, margin: 0, color: "#333" }}>
-              Mo–Fr 9–18 Uhr, Sa 9–13 Uhr
-            </p>
-          </div>
+            {(
+              [
+                { emoji: "🧠", label: "Kopf- & Migräneschmerzen", id: "area-1" },
+                { emoji: "🦴", label: "Nacken- & Rückenbeschwerden", id: "area-2" },
+                { emoji: "😴", label: "Schlafstörungen & Erschöpfung", id: "area-3" },
+                { emoji: "😟", label: "Stress & Burnout", id: "area-4" },
+                { emoji: "👂", label: "Tinnitus & Schwindel", id: "area-5" },
+                { emoji: "🤰", label: "Schwangerschaft & Geburtsvorbereitung", id: "area-6" },
+                { emoji: "👶", label: "Säuglinge & Kleinkinder", id: "area-7" },
+                { emoji: "🏃", label: "Sportverletzungen & Rehabilitation", id: "area-8" },
+              ] as { emoji: string; label: string; id: string }[]
+            ).map(({ emoji, label, id }) => (
+              <li
+                key={id}
+                data-edit-id={id}
+                style={{
+                  background: "#fff",
+                  border: "1px solid #cce0da",
+                  borderRadius: 10,
+                  padding: "20px 20px",
+                  display: "flex",
+                  alignItems: "flex-start",
+                  gap: 12,
+                }}
+              >
+                <span style={{ fontSize: 24, flexShrink: 0 }}>{emoji}</span>
+                <span style={{ fontSize: 15, lineHeight: 1.5, color: "#2a4a44", fontWeight: 600 }}>
+                  {label}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* ── ÜBER MICH ── */}
+      <section style={{ padding: "72px 24px" }}>
+        <div style={maxW}>
+          <span style={accentBar} />
+          <h2
+            data-edit-id="therapist-title"
+            style={{ fontSize: 30, margin: "0 0 16px", fontWeight: 700 }}
+          >
+            Über mich
+          </h2>
+          <p
+            data-edit-id="therapist-text"
+            style={{ lineHeight: 1.8, color: "#444", fontSize: 17, margin: 0 }}
+          >
+            Mein Name ist Maria Musterfrau. Seit über 10 Jahren begleite ich Menschen
+            auf ihrem Weg zu mehr Wohlbefinden und innerer Balance. Meine Ausbildung zur
+            zertifizierten Kraniosakral-Therapeutin absolvierte ich am Österreichischen
+            Institut für Kraniosakrale Therapie. Ergänzend habe ich Weiterbildungen in
+            Traumasensibilität und Säuglingstherapie absolviert. In meiner Praxis begegne
+            ich jedem Menschen mit Achtsamkeit, Respekt und ganzheitlichem Blick.
+          </p>
         </div>
       </section>
 
       {/* ── LEISTUNGEN & PREISE ── */}
-      <section style={{ padding: "72px 24px" }}>
+      <section style={{ background: "#f2f8f6", padding: "72px 24px" }}>
         <div style={maxW}>
           <span style={accentBar} />
           <h2
@@ -145,14 +198,21 @@ export default function Home() {
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
-                background: "#faf7f2",
-                border: "1px solid #ede8df",
+                background: "#fff",
+                border: "1px solid #cce0da",
                 borderRadius: 8,
                 padding: "18px 24px",
               }}
             >
-              <span style={{ fontSize: 16, fontWeight: 600 }}>Schnitt &amp; Föhnen</span>
-              <span style={{ fontSize: 16, fontWeight: 700, color: "#b89c6e" }}>ab 57 €</span>
+              <div>
+                <span style={{ fontSize: 16, fontWeight: 600, display: "block" }}>
+                  Erstbehandlung (90 Min.)
+                </span>
+                <span style={{ fontSize: 14, color: "#666" }}>inkl. ausführlicher Anamnese</span>
+              </div>
+              <span style={{ fontSize: 16, fontWeight: 700, color: "#7aa89c", whiteSpace: "nowrap", marginLeft: 16 }}>
+                110 €
+              </span>
             </li>
             <li
               data-edit-id="price-2"
@@ -160,14 +220,21 @@ export default function Home() {
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
-                background: "#faf7f2",
-                border: "1px solid #ede8df",
+                background: "#fff",
+                border: "1px solid #cce0da",
                 borderRadius: 8,
                 padding: "18px 24px",
               }}
             >
-              <span style={{ fontSize: 16, fontWeight: 600 }}>Farbe &amp; Strähnen</span>
-              <span style={{ fontSize: 16, fontWeight: 700, color: "#b89c6e" }}>ab 80 €</span>
+              <div>
+                <span style={{ fontSize: 16, fontWeight: 600, display: "block" }}>
+                  Folgebehandlung (60 Min.)
+                </span>
+                <span style={{ fontSize: 14, color: "#666" }}>Einzelsitzung</span>
+              </div>
+              <span style={{ fontSize: 16, fontWeight: 700, color: "#7aa89c", whiteSpace: "nowrap", marginLeft: 16 }}>
+                85 €
+              </span>
             </li>
             <li
               data-edit-id="price-3"
@@ -175,35 +242,101 @@ export default function Home() {
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
-                background: "#faf7f2",
-                border: "1px solid #ede8df",
+                background: "#fff",
+                border: "1px solid #cce0da",
                 borderRadius: 8,
                 padding: "18px 24px",
               }}
             >
-              <span style={{ fontSize: 16, fontWeight: 600 }}>Bart &amp; Pflege</span>
-              <span style={{ fontSize: 16, fontWeight: 700, color: "#b89c6e" }}>ab 25 €</span>
+              <div>
+                <span style={{ fontSize: 16, fontWeight: 600, display: "block" }}>
+                  Säuglings- &amp; Kinderbehandlung (45 Min.)
+                </span>
+                <span style={{ fontSize: 14, color: "#666" }}>für Neugeborene bis 12 Jahre</span>
+              </div>
+              <span style={{ fontSize: 16, fontWeight: 700, color: "#7aa89c", whiteSpace: "nowrap", marginLeft: 16 }}>
+                70 €
+              </span>
+            </li>
+            <li
+              data-edit-id="price-4"
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                background: "#fff",
+                border: "1px solid #cce0da",
+                borderRadius: 8,
+                padding: "18px 24px",
+              }}
+            >
+              <div>
+                <span style={{ fontSize: 16, fontWeight: 600, display: "block" }}>
+                  5er-Block Folgebehandlungen
+                </span>
+                <span style={{ fontSize: 14, color: "#666" }}>je 60 Min., Paketpreis</span>
+              </div>
+              <span style={{ fontSize: 16, fontWeight: 700, color: "#7aa89c", whiteSpace: "nowrap", marginLeft: 16 }}>
+                390 €
+              </span>
             </li>
           </ul>
+          <p style={{ marginTop: 20, fontSize: 14, color: "#666", lineHeight: 1.6 }}>
+            * Kraniosakral-Therapie ist eine komplementäre Methode und ersetzt keine ärztliche Behandlung.
+            Kassenrefundierung ist nicht möglich. Einige private Zusatzversicherungen übernehmen die Kosten anteilig.
+          </p>
+        </div>
+      </section>
+
+      {/* ── PRAXISZEITEN ── */}
+      <section style={{ padding: "64px 24px" }}>
+        <div style={maxW}>
+          <span style={accentBar} />
+          <h2
+            data-edit-id="hours-title"
+            style={{ fontSize: 30, margin: "0 0 24px", fontWeight: 700 }}
+          >
+            Praxiszeiten
+          </h2>
+          <div
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 14,
+              background: "#f2f8f6",
+              border: "1px solid #cce0da",
+              borderRadius: 8,
+              padding: "18px 28px",
+              boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
+            }}
+          >
+            <span style={{ fontSize: 24 }}>🕘</span>
+            <p data-edit-id="hours" style={{ fontSize: 17, margin: 0, color: "#333" }}>
+              Mo, Mi, Fr 9–18 Uhr · Di &amp; Do 11–20 Uhr · Sa nach Vereinbarung
+            </p>
+          </div>
         </div>
       </section>
 
       {/* ── FOOTER ── */}
       <footer
         style={{
-          background: "#1a1a1a",
-          color: "#aaa",
+          background: "#1d3530",
+          color: "#9abfb8",
           padding: "40px 24px",
           textAlign: "center",
         }}
       >
         <p
           data-edit-id="contact"
-          style={{ margin: 0, fontSize: 15, lineHeight: 1.7 }}
+          style={{ margin: 0, fontSize: 15, lineHeight: 1.9 }}
         >
-          Demogasse 1, 1220 Wien · 01 234 56 78 · hallo@salon-demo.at
+          Praxis Maria Musterfrau · Ruhegasse 7, 1090 Wien
+          <br />
+          📞 01 234 56 78 · ✉️ praxis@kraniosakral-demo.at
         </p>
       </footer>
+
     </main>
   );
 }
